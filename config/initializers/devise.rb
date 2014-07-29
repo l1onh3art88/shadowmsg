@@ -11,7 +11,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.secret_key = ENV['DEVISE_SECRET_KEY']
-  config.omniauth :facebook, "KEY", "SECRET"
+  config.omniauth :facebook, "270303556486890", "f59e6c6f82cd90c0edfa05ef74a4ce2e"
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.

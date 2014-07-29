@@ -27,7 +27,7 @@ Shadowmsg::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   # General Settings
-  config.app_domain = 'somedomain.com'
+  config.app_domain = 'shadowmsg.herokuapp.com'
 
   # Email
   config.action_mailer.delivery_method = :smtp
@@ -40,6 +40,6 @@ Shadowmsg::Application.configure do
     user_name: 'someuser',
     password: 'somepass',
     authentication: :plain,
-    domain: 'somedomain.com'
+    domain: 'shadowmsg.herokuapp.com'
   }
 end
