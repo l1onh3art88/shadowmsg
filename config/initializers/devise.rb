@@ -12,7 +12,7 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.secret_key = ENV['DEVISE_SECRET_KEY']
   config.omniauth :facebook, "270303556486890", "f59e6c6f82cd90c0edfa05ef74a4ce2e"
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'shadowmsg.herokuapp.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

@@ -46,6 +46,11 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'emoji'
+gem 'telapi'
+gem "hiredis", "~> 0.4.0"
+gem "redis", ">= 2.2.0", require: ["redis", "redis/connection/hiredis"]
+gem 'httparty'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

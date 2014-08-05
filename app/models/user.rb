@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
 
-  devise :database_authenticatable, :registerable, :confirmable,
+  
+
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
          validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update

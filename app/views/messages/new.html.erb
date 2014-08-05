@@ -1,0 +1,14 @@
+<h1>New Message</h1>
+<div class = 'col-md-8'>
+	<%= form_for @message, url: messages_url do |f| %>
+		<div class = "form-group">
+			<%= f.label :to %>
+			<%= f.text_field :to, class: 'form-control' %>
+		</div>
+		<div class ="form-group">
+			<%= f.label :body %>
+			<%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter message" %>
+		</div>
+			<%= f.submit "Send", class: 'btn btn-success' %>
+	<% end %>
+</div>

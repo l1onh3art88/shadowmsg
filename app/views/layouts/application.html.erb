@@ -11,13 +11,15 @@
 		<ul class="nav nav-tabs">
 			<li><%= link_to "Shadowmsg", root_path %></li>
 			<div class = "pull-right user-info">
+				<%- if signed_in? %>
+					"hurray"
+				<% end %>
 				<%= link_to "Sign In", new_user_session_path %> or
 				<%= link_to "Sign Up", new_user_registration_path %>
 			</div>
 		</ul>
+		<%= yield %>
 	</div>
-
-<%= yield %>
 
 </body>
 </html>
