@@ -8,9 +8,10 @@ class Message
 		
 		@body = body
 		@self_destruct_in_seconds = self_destruct_in_seconds
+		
 	end
 
-	
+	#redirect to create message page after login, add a special screen after message has been read, messages show available to unauthenticated users, create a anonymous list of previous 5 messages sent(fixed_array).
 	def Message.find(id)
 		body = REDIS.get id
 		expire_in = id.split(":").last.to_i
@@ -18,6 +19,8 @@ class Message
 			REDIS.set("#{id}:read_flag", true)
 			REDIS.expire id, expire_in
 			REDIS.expire "#{id}:read_flag", expire_in
+		elsif REDIS.get("#{id}:read_flag").true?
+			redirect_to :msg_read
 		end
 		return body
 	end
