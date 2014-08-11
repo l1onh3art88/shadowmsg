@@ -1,5 +1,3 @@
-REDISTOGO_URL: 'redis://redistogo:23d7d203566bda6a96f1a31cbe3d9f1f@hoki.redistogo.com:9911/'
-
 default:
   host: localhost
   port: 6379

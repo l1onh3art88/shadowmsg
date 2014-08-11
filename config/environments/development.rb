@@ -4,7 +4,7 @@ Shadowmsg::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  
+  ENV["REDISTOGO_URL"] = 'redis://redistogo:23d7d203566bda6a96f1a31cbe3d9f1f@hoki.redistogo.com:9911/'
   config.cache_classes = false
 
   # Do not eager load code on boot.
