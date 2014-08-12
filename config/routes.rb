@@ -5,4 +5,5 @@ Shadowmsg::Application.routes.draw do
   resources :messages
   get 'new_message'=> 'messages#new'
   get 'msg_read' => 'messages#msg_read'
+  get 'privacy' => 'privacy#show'
 end

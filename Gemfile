@@ -51,6 +51,7 @@ gem "hiredis", "~> 0.4.0"
 gem "redis", ">= 2.2.0", require: ["redis", "redis/connection/hiredis"]
 gem 'httparty'
 gem 'pundit'
+gem 'bitly'
 
 
 # Use ActiveModel has_secure_password
