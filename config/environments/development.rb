@@ -29,6 +29,7 @@ Shadowmsg::Application.configure do
   config.assets.debug = true
   # General Settings
   config.app_domain = 'shadowmsg.herokuapp.com'
+  
 
   # Email
   config.action_mailer.delivery_method = :smtp
