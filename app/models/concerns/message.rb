@@ -33,7 +33,7 @@ class Message
 		id = [SecureRandom.hex(14), @self_destruct_in_seconds.to_s].join(":")
 		REDIS.set message_key_for(id),self.body
 		REDIS.lpush global_messages, self.body
-		REDIS.ltrim global_messages, 0, 4
+		REDIS.ltrim global_messages, 0, 2
 		return message_key_for(id)
 	end
 
