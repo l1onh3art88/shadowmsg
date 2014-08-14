@@ -19,12 +19,12 @@ class Message
 	def Message.find(id)
 		body = REDIS.get id
 		# index = REDIS.append index_key "#{id}"
-		expire_in = id.split(":").last.to_i
-		if REDIS.get("#{id}:read_flag").nil?
-			REDIS.set("#{id}:read_flag", true)
-			REDIS.expire id, expire_in
-			REDIS.expire "#{id}:read_flag", expire_in
-		end
+		# expire_in = id.split(":").last.to_i
+		# if REDIS.get("#{id}:read_flag").nil?
+		# 	REDIS.set("#{id}:read_flag", true)
+		# 	REDIS.expire id, expire_in
+		# 	REDIS.expire "#{id}:read_flag", expire_in
+		# end
 		return body
 	end
 

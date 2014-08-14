@@ -26,7 +26,10 @@ class MessagesController < ApplicationController
 		# r = HTTParty.post("https://heroku.telapi.com/send_sms", :body => request_data)
 		
 		puts message_id
-		redirect_to :back, notice: "Message was sent successfully"
-
+		if Rails.env.development?
+			redirect_to message_url(id: message_id)
+		else
+			redirect_to :back, notice: "Message was sent successfully"
+		end
 	end
 end

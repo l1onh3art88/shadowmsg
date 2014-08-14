@@ -6,4 +6,5 @@ Shadowmsg::Application.routes.draw do
   get 'new_message'=> 'messages#new'
   get 'msg_read' => 'messages#msg_read'
   get 'privacy' => 'privacy#show'
+  get 'login_success' => 'messages#login_success'
 end
