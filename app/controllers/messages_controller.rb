@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 		if Rails.env.development?
 			redirect_to message_url(id: message_id)
 		else
-			redirect_to :back, notice: "Message was sent successfully"
+			redirect_to :back, flash[:notice]= "Message was sent successfully"
 		end
 	end
 end
