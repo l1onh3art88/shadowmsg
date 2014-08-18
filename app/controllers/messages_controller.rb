@@ -24,12 +24,10 @@ class MessagesController < ApplicationController
 		Telapi::Message.create(params[:message][:to], '+19728537076', "Hi, #{current_user.name} has sent you a Shadow message, #{u}")
 		# request_data = { :To => params[:message][:to], :From => "[+16173263477]", :Body => "Hi, #{current_user.name} has sent you a Shadow message,  #{message_url(id: message_id)}", :Token => ENV['TELAPI_TOKEN'] }
 		# r = HTTParty.post("https://heroku.telapi.com/send_sms", :body => request_data)
-		
 		puts message_id
-		if Rails.env.development?
-			redirect_to message_url(id: message_id)
-		else
-			redirect_to :back
-		end
+		
+		
+		redirect_to :back
+		
 	end
 end
