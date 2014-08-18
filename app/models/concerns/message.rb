@@ -30,7 +30,7 @@ class Message
 
 	def save
 		#Telapi::Message.create('{to_number}', '{from_number}', '{body}')
-		id = [SecureRandom.hex(14), @self_destruct_in_seconds.to_s].join(":")
+		id = [SecureRandom.hex(14), @self_destruct_in_seconds.to_s.join(":")
 		REDIS.set message_key_for(id),self.body
 		REDIS.lpush global_messages, self.body
 		REDIS.ltrim global_messages, 0, 2
