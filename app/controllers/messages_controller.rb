@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
 		puts message_id
 		
 		
-		redirect_to :back
+		redirect_to new_message_url
 		
 	end
 end
