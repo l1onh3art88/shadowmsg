@@ -10,7 +10,7 @@
 			<%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter message" %>
 		</div>
 		<div class="form-group">
-			<%= f.select :self_destruct_in_seconds, options_for_select((5..30)) %>
+			<%= f.select :self_destruct_in_seconds, options_for_select((20..30)) %>
 		</div>
 					
 		<%= f.submit "Send", class: 'btn btn-success' %>
